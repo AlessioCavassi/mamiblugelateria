@@ -1,0 +1,45 @@
+/* Layout principale del sito */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.main-content {
+  margin-top: 84px; /* Altezza header (80px) + bordo arcobaleno (4px) */
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.three-scene-container {
+  width: 100%;
+  height: calc(100vh - 84px);
+  position: relative;
+  background: linear-gradient(135deg, #3B83BD 0%, #9EB8D9 100%);
+  overflow-x: hidden; /* Impedisce lo scroll orizzontale */
+  max-width: 100vw; /* Limita la larghezza alla viewport */
+  box-sizing: border-box;
+}
+
+.content-section {
+  position: relative;
+  z-index: 2;
+}
